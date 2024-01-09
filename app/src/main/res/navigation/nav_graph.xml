@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/allOrdersActivity">
+    <activity
+        android:id="@+id/allOrdersActivity"
+        android:name="com.example.delightcart.Activities.AllOrdersActivity"
+        android:label="activity_orders"
+        tools:layout="@layout/activity_orders" />
+    <activity
+        android:id="@+id/orderDetailsActivity"
+        android:name="com.example.delightcart.Activities.OrderDetailsActivity"
+        android:label="activity_orders_details"
+        tools:layout="@layout/activity_orders_details" />
+    <activity
+        android:id="@+id/billingActivity"
+        android:name="com.example.delightcart.Activities.BillingActivity"
+        android:label="activity_billing"
+        tools:layout="@layout/activity_billing" />
+</navigation>

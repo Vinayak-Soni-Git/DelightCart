@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Application.DelightCartApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DelightCart"
+        tools:targetApi="31">
+        <activity
+            android:name=".Admin.AdminPortal"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SignInActivities.AdminSignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.OrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AllOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UserAccountDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.BillingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ProductDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ProductsAdder.ProductAdder"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"/>
+        <activity
+            android:name=".Activities.OnBoarding.MainOnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ProductDetailActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SignUpActivities.SignUpPhoneDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SignUpActivities.SignUpUserAdditionalDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SignUpActivities.SignUpUserDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.Home"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SignUpActivities.SignUpOTPActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activities.SignInActivities.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Launch.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
