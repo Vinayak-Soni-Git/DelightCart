@@ -93,11 +93,11 @@
                         android:id="@+id/ordersLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bungee"
                         android:text="@string/orders"
                         android:textColor="@color/white"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/bungee"
-                        android:layout_centerInParent="true">
+                        android:textSize="10sp">
 
                     </TextView>
 
@@ -105,12 +105,12 @@
                         android:id="@+id/ordersCountLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/_40"
-                        android:textColor="@color/white"
                         android:layout_below="@+id/ordersLabel"
-                        android:textSize="11sp"
+                        android:layout_centerInParent="true"
                         android:fontFamily="@font/bungee"
-                        android:layout_centerInParent="true">
+                        android:text="@string/_0"
+                        android:textColor="@color/white"
+                        android:textSize="11sp">
 
                     </TextView>
 
@@ -136,11 +136,11 @@
                         android:id="@+id/cartLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bungee"
                         android:text="@string/cart"
                         android:textColor="@color/white"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/bungee"
-                        android:layout_centerInParent="true">
+                        android:textSize="10sp">
 
                     </TextView>
 
@@ -148,7 +148,7 @@
                         android:id="@+id/cartCountLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/_40"
+                        android:text="@string/_0"
                         android:textColor="@color/white"
                         android:layout_below="@+id/cartLabel"
                         android:textSize="11sp"
@@ -181,7 +181,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/wishlist"
                         android:textColor="@color/white"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:fontFamily="@font/bungee"
                         android:layout_centerInParent="true">
 
@@ -191,7 +191,7 @@
                         android:id="@+id/wishListCountLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/_40"
+                        android:text="@string/_0"
                         android:textColor="@color/white"
                         android:layout_below="@+id/wishListLabel"
                         android:textSize="11sp"
@@ -234,7 +234,7 @@
                         android:id="@+id/addressCountLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/_40"
+                        android:text="@string/_0"
                         android:textColor="@color/white"
                         android:layout_below="@+id/addressLabel"
                         android:textSize="11sp"

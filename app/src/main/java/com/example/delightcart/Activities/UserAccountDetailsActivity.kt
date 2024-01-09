@@ -21,6 +21,7 @@ import com.example.delightcart.databinding.ActivityUserAccountDetailsBinding
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class UserAccountDetailsActivity : AppCompatActivity() {
@@ -28,12 +29,24 @@ class UserAccountDetailsActivity : AppCompatActivity() {
     private val viewModel by viewModels<UserAccountViewModel>()
     private var imageUri: Uri? = null
     private lateinit var imageActivityResultLauncher: ActivityResultLauncher<Intent>
+    
+    private var cartCount = 0
+    private var ordersCount = 0
+    private var addressCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityUserAccountDetailsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        lifecycleScope.launch {
+            cartCount = viewModel.getTotalCartItemCount()
+            ordersCount = viewModel.getTotalOrdersCount()
+            addressCount = viewModel.getTotalAddressCount()
+        }
+        
+        
+        
         val rootView: View = findViewById(android.R.id.content)
         imageActivityResultLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
@@ -126,9 +139,9 @@ class UserAccountDetailsActivity : AppCompatActivity() {
             profileEmail.setText(data.email)
             profilePhoneNumber.setText(data.phone)
 
-            cartCountLabel.text = viewModel.getTotalCartItemCount().toString()
-            ordersCountLabel.text = viewModel.getTotalOrdersCount().toString()
-            addressCountLabel.text = viewModel.getTotalAddressCount().toString()
+            cartCountLabel.text = cartCount.toString()
+            ordersCountLabel.text = ordersCount.toString()
+            addressCountLabel.text = addressCount.toString()
 
         }
     }

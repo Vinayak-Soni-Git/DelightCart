@@ -125,37 +125,34 @@ class UserAccountViewModel @Inject constructor(
         }
     }
 
-    fun getTotalCartItemCount(): Int {
-        var cartItemCount = 0
-        firestore.collection("users").document(auth.uid!!).collection("cart").get()
-            .addOnSuccessListener {
-                cartItemCount = it.size()
-            }.addOnFailureListener {
-                Log.e("Firestore", "Error getting documents: $it")
-            }
-        return cartItemCount
+    suspend fun getTotalCartItemCount(): Int {
+        return try {
+            val querySnapshot = firestore.collection("users").document(auth.uid!!).collection("cart").get().await()
+            return querySnapshot.size()
+        } catch (e: Exception) {
+            Log.d("Firestore", "Error getting documents: $e")
+            0
+        }
     }
 
-    fun getTotalAddressCount(): Int {
-        var addressItemCount = 0
-        firestore.collection("users").document(auth.uid!!).collection("address").get()
-            .addOnSuccessListener {
-                addressItemCount = it.size()
-            }.addOnFailureListener {
-                Log.e("Firestore", "Error getting documents: $it")
-            }
-        return addressItemCount
+    suspend fun getTotalAddressCount(): Int {
+        return try {
+            val querySnapshot = firestore.collection("users").document(auth.uid!!).collection("address").get().await()
+            return querySnapshot.size()
+        } catch (e: Exception) {
+            Log.d("Firestore", "Error getting documents: $e")
+            0
+        }
     }
 
-    fun getTotalOrdersCount(): Int {
-        var orderItemCount = 0
-        firestore.collection("users").document(auth.uid!!).collection("orders").get()
-            .addOnSuccessListener {
-                orderItemCount = it.size()
-            }.addOnFailureListener {
-                Log.e("Firestore", "Error getting documents: $it")
-            }
-        return orderItemCount
+    suspend fun getTotalOrdersCount(): Int {
+        return try {
+            val querySnapshot = firestore.collection("users").document(auth.uid!!).collection("orders").get().await()
+            return querySnapshot.size()
+        } catch (e: Exception) {
+            Log.d("Firestore", "Error getting documents: $e")
+            0
+        }
     }
 
 }
