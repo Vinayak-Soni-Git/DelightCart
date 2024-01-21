@@ -160,12 +160,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    </com.google.android.gms.common.SignInButton>    
-    
-    
+    </com.google.android.gms.common.SignInButton>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -172,4 +172,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="delightcart">DelightCart</string>
     <string name="_0">0</string>
+    <string name="your_shopping_cart_is_empty">Your shopping cart is empty</string>
+    <string name="order_confirmed_successfully">Order confirmed successfully</string>
 </resources>

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.delightcart.Adapters.AddressAdapter
 import com.example.delightcart.Adapters.BillingProductsAdapter
+import com.example.delightcart.Dialog.setupOrderConfirmedDialog
 import com.example.delightcart.Home.Home
 import com.example.delightcart.Models.Address
 import com.example.delightcart.Models.CartProduct
@@ -97,6 +98,7 @@ class BillingActivity : AppCompatActivity() {
 
                     is Resource.Success -> {
                         binding.buttonPlaceOrder.revertAnimation()
+                        setupOrderConfirmedDialog()
                         Snackbar.make(rootView, "Your order was placed", Snackbar.LENGTH_LONG)
                             .show()
                     }
