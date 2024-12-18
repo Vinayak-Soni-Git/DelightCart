@@ -20,7 +20,7 @@ class FirebaseDB {
     private val storesCollection = Firebase.firestore.collection(STORES_COLLECTION)
     private val firebaseStorage = Firebase.storage.reference
 
-    val userUid = FirebaseAuth.getInstance().currentUser?.uid
+    private val userUid = FirebaseAuth.getInstance().currentUser?.uid
 
     private val userCartCollection = userUid?.let {
         Firebase.firestore.collection(USERS_COLLECTION).document(it).collection(CART_COLLECTION)

@@ -109,6 +109,10 @@ class ProductDetailsActivity : AppCompatActivity() {
         product?.sizes?.let {
             productSizesAdapter.differ.submitList(product.sizes)
         }
+        
+        binding.imageClose.setOnClickListener { 
+            finish()
+        }
     }
 
     private fun setupViewPager() {

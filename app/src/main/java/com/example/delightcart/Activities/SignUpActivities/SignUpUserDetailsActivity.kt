@@ -134,6 +134,7 @@ class SignUpUserDetailsActivity : AppCompatActivity() {
                             "Account Created Successfully",
                             Toast.LENGTH_SHORT
                         ).show()
+                        
                         Handler(Looper.getMainLooper()).postDelayed({
                             nextButton.setBackgroundColor(resources.getColor(R.color.white))
                             nextButton.revertAnimation()
@@ -149,6 +150,7 @@ class SignUpUserDetailsActivity : AppCompatActivity() {
                                 R.drawable.cross_circle_svgrepo_com
                             )
                         )
+                        
                         Toast.makeText(
                             this@SignUpUserDetailsActivity,
                             "An error occurred while creating account",
